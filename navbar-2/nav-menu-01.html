@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nav Menu 01</title>
+  <style>
+
+    :root {
+      --distance: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background: rgb(19, 19, 20);
+    }
+
+    .nav {
+      position: relative;
+      width: 400px;
+      height: 70px;
+      border-radius: 10px;
+      margin: 120px auto 48px;
+      padding: 0 24px;
+      background-color: #fff;
+      display: flex;
+      list-style-type: none;
+    }
+    
+    .nav .icon {
+      position: relative;
+      width: calc(100% / 5);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .nav .icon a {
+      text-decoration: none;
+      color: rgb(38, 38, 38);
+    }
+
+    .nav .icon ion-icon {
+      font-size: 25px;
+    }
+
+    .nav .icon.active ion-icon {
+      color: rgb(15, 15, 202);
+      transition: .5s;
+    }
+
+    .nav .indicator {
+      position: absolute;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background-color: blue;
+      top: 12px;
+      left: 56px;
+      transform: translateX(var(--distance));
+      transition: .5s;
+    }
+
+  </style>
+</head>
+<body>
+  <ul class="nav">
+    <li class="icon active">
+      <a href="#">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </li>
+
+    <li class="icon">
+      <a href="#">
+        <ion-icon name="person-outline"></ion-icon>
+      </a>
+    </li>
+
+    <li class="icon">
+      <a href="#">
+        <ion-icon name="chatbubble-outline"></ion-icon>
+      </a>
+    </li>
+
+    <li class="icon">
+      <a href="#">
+        <ion-icon name="camera-outline"></ion-icon>
+      </a>
+    </li>
+
+    <li class="icon">
+      <a href="#">
+        <ion-icon name="settings-outline"></ion-icon>
+      </a>
+    </li>
+    
+    <div class="indicator"></div>
+  </ul>
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let menuIcon = document.querySelectorAll(".icon");
+    menuIcon.forEach((element, index) => {
+      element.addEventListener("click", () => {
+        document.querySelector(".active").classList.remove("active");
+        element.classList.add("active");
+
+        const root = document.querySelector(':root');
+        root.style.setProperty('--distance', `${70.5 * index}px`);
+      });
+    });
+  </script>
+</body>
+</html>
