@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --main-font:'Inter', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    margin: 0 1.5rem;
+
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font: var(--main-font);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-pfp{
+    height: 2.7rem;
+}
+nav i{
+    font-size: 2rem;
+}
+.greet h1{
+    font-weight: 400;
+}
+.greet h3{
+    font-weight: 300;
+    color: #595959;
+    margin-top: -1.4rem;
+}
+
+
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 20rem;
+    background-color: rgba(238, 238, 238, 0.541);
+}
+.search input{
+    border: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.search{
+    border: rgba(204, 204, 204, 0.212) 1px solid;
+    width: 70%;
+    padding: 5px 6px;
+    border-radius: 3rem;
+    height: 1.5rem;
+}
+
+.recent-section h2 ,.products h2{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.recent-boxes{
+    text-align: center;
+    border: #ccc 2px solid;
+    border-radius: 10px;
+    margin: 5px;
+    height: 7rem;
+    width: 5rem;
+    background-color: #eee;
+}
+.recent-boxes img{
+    padding-top: .7rem;
+    height: 3.5rem;
+    margin: 4px;
+    margin-bottom: -1rem;
+}
+
+.products {
+    margin: 1rem 0;
+}
+.product-box{
+    padding: .5rem;
+    margin: .3rem .3rem;
+    border-radius: 9px;
+    background-color: #bde0fe4b;
+    background-color: #eee;
+    width: 75%;
+}
+.product-box img{
+    height: 9rem;
+    border-radius: 9px;
+
+}
+
+
+.product-sub-heading {
+    margin-top: -10px;
+    font-size: 1rem;
+    margin-bottom: -8px;
+}
+.product-sub-heading i{
+    margin-left: 5px;
+}
+
+
+
