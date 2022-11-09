@@ -46,40 +46,6 @@
             </div>
         </div>
     </div>
-
-    <ul class="nav">
-        <li class="icon active">
-          <a href="#">
-            <ion-icon name="home-outline"></ion-icon>
-          </a>
-        </li>
-    
-        <li class="icon">
-          <a href="#">
-            <ion-icon name="person-outline"></ion-icon>
-          </a>
-        </li>
-    
-        <li class="icon">
-          <a href="#">
-            <ion-icon name="chatbubble-outline"></ion-icon>
-          </a>
-        </li>
-    
-        <li class="icon">
-          <a href="#">
-            <ion-icon name="camera-outline"></ion-icon>
-          </a>
-        </li>
-    
-        <li class="icon">
-          <a href="#">
-            <ion-icon name="settings-outline"></ion-icon>
-          </a>
-        </li>
-        
-        <div class="indicator"></div>
-    </ul>
     <!-- ------------------------ -->
     <div class="products">
         <h2>Products</h2>
@@ -98,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="products-sub-section flex-row">
+            <!-- <div class="products-sub-section flex-row">
                 <div class="product-box flex-column">
                     <img src="./images/Rectangle 13.png">
                     <div class="product-sub-heading flex-row">
@@ -111,27 +77,13 @@
                         <h4>Bookeseasy <i class='bx bx-bookmark'></i></h4>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- ------------------------ -->
     
-    <!-- ------------------------ -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  
-    <script>
-      let menuIcon = document.querySelectorAll(".icon");
-      menuIcon.forEach((element, index) => {
-        element.addEventListener("click", () => {
-          document.querySelector(".active").classList.remove("active");
-          element.classList.add("active");
-  
-          const root = document.querySelector(':root');
-          root.style.setProperty('--distance', `${70.5 * index}px`);
-        });
-      });
-    </script>
+    
+
     <script src="app.js"></script>
 </body>
 </html>
